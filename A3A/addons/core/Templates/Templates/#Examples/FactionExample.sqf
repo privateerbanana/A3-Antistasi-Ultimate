@@ -128,6 +128,8 @@
 //////////////////////////
 //       Loadouts       //
 //////////////////////////
+
+//loadout will be applied to all units, regardless of being militia, sf, military
 private _loadoutData = call _fnc_createLoadoutData;
 _loadoutData set ["rifles", []];
 _loadoutData set ["carbines", []];
