@@ -216,6 +216,9 @@ _loadoutData set ["goggles", []];
 //    Special Forces Loadout Data    //
 ///////////////////////////////////////
 
+//loadouts will only applly to SF. if loadouts defined in loadout sectionm then both arrays will be included in the pool of potenial equipment
+
+
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _sfLoadoutData set ["uniforms", []];
 _sfLoadoutData set ["vests", []];
