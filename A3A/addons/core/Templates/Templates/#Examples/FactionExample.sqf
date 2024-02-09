@@ -129,7 +129,9 @@
 //       Loadouts       //
 //////////////////////////
 
-//loadout will be applied to all units, regardless of being militia, sf, military
+//loadouts will be added to pool of possible weapons for militia, military, SF
+//Equipment in following catagories will appear in a "pool" from which spawned units will draw from. Unknown if weighted, so assume more weapons = lower chance of given weapon spawning.
+
 private _loadoutData = call _fnc_createLoadoutData;
 _loadoutData set ["rifles", []];
 _loadoutData set ["carbines", []];
@@ -216,8 +218,7 @@ _loadoutData set ["goggles", []];
 //    Special Forces Loadout Data    //
 ///////////////////////////////////////
 
-//loadouts will be added to pool of possible weapons for militia, military, SF
-
+//Weapons/Items that will only appear in pool for SF
 
 private _sfLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _sfLoadoutData set ["uniforms", []];
@@ -238,6 +239,8 @@ _sfLoadoutData set ["sidearms", []];
 /////////////////////////////////
 //    Military Loadout Data    //
 /////////////////////////////////
+
+//Weapons/Items that only appear in pool for military
 
 private _militaryLoadoutData = _loadoutData call _fnc_copyLoadoutData;
 _militaryLoadoutData set ["uniforms", []];
